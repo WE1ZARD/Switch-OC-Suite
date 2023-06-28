@@ -369,7 +369,7 @@ Result MemFreqDvbTable(u32* ptr) {
         emc_dvb_dvfs_table_t oc_table = { 2131200, { 725, 700, 675, } };
         std::memcpy(new_start, &oc_table, sizeof(emc_dvb_dvfs_table_t));
     } else if (C.marikoEmcMaxClock < 2665600){
-        emc_dvb_dvfs_table_t oc_table = { 2400000, { 750, 725, 700, } };
+        emc_dvb_dvfs_table_t oc_table = { 2400000, { 775, 750, 725, } };  // default 750, 725, 700
         std::memcpy(new_start, &oc_table, sizeof(emc_dvb_dvfs_table_t));
     } else {
         emc_dvb_dvfs_table_t oc_table = { 2665600, { 775, 750, 725, } };
